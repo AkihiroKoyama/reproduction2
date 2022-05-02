@@ -1,0 +1,335 @@
+/* common */
+
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+a {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+}
+
+h1 {
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.container {
+  /* outline: 1px solid red; */
+  width: calc(100% - 32px);
+}
+
+#mainAria,
+.container {
+  max-width: 1168px;
+  margin: 0 auto;
+}
+
+.readMore {
+  text-align: center;
+}
+
+.readMore a {
+  font-size: 1.4rem;
+  position: relative;
+}
+
+.readMore a::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background: #333;
+  bottom: -2px;
+  left: 0;
+  transition: all 200ms ease;
+}
+
+.readMore a:hover::after {
+  opacity: 0;
+  transform: translateY(3px);
+}
+
+
+
+/* header */
+
+#header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 100;
+}
+
+#header h1 {
+  padding: 20px 0 12px;
+}
+
+#header .g-nav {
+  background-color: #444;
+  height: 39px;
+  text-align: center;
+  vertical-align: center;
+}
+
+#header .g-nav .container {
+  padding: 9px 0 8px;
+}
+
+#header .g-nav ul {
+  /* border: 1px solid lightgreen; */
+  width: 468px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+
+/* picup */
+
+#picup {
+  padding-top: 109px;
+}
+
+#picup section {
+  padding-top: 32px;
+}
+
+#picup h2 {
+  line-height: 22px;
+  padding: 14px 0;
+}
+
+/* main */
+
+#main h2 {
+  padding-top: 104px;
+  font-size: 2.4rem;
+  line-height: 34px;
+  padding-bottom: 10px;
+}
+
+#main .uploadedDate,
+#main .category {
+  display: inline-block;
+  font-size: 1.2rem;
+  margin-right: 20px;
+  padding-bottom: 10px;
+}
+
+#main .mainText {
+  padding: 12px 40px 30px;
+}
+
+#main .mainText p {
+  font-size: 1.5rem;
+}
+
+/* sideBar */
+
+#sideBar .imgAndName {
+  text-align: center;
+}
+
+#sideBar .imgAndName img {
+  margin: 92px 0 30px;
+  border-radius: 50%;
+}
+
+#sideBar h2 {
+  text-align: center;
+  padding-bottom: 32px;
+}
+
+#sideBar h2 {
+  font-size: 1.8rem;
+}
+
+#sideBar .profileText {
+  font-size: 1.4rem;
+  padding: 36px 0 56px;
+}
+
+#sideBar .rankText {
+  font-size: 1.4rem;
+  padding: 0 0 30px;
+}
+
+#sideBar #archive ul {
+  font-size: 1.3rem;
+  padding-bottom: 120px;
+}
+
+#sideBar #archive li {
+  border-top: 1px solid #333;
+  padding: 20px 24px;
+}
+
+#sideBar #archive li:nth-last-child(1) {
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+
+/* footer */
+
+#footer {
+  background-color: #f7f7f7;
+}
+
+#footer #footerAbout h2 {
+  padding: 52px 0 28px;
+}
+
+#footer .aboutText {
+  font-size: 1.4rem;
+  padding-bottom: 20px;
+}
+
+#footer .aboutList {
+  font-size: 1.5rem;
+  line-height: 24px;
+}
+
+/* #footer .aboutList li {
+  margin-left: 8px;
+} */
+
+#footer .aboutList li {
+  position: relative;
+  margin-left: 12px;
+}
+
+#footer .aboutList a::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px 8px;
+  border-color: transparent transparent transparent #333;
+  position: absolute;
+  top: 24%;
+  left: -12px;
+  transition: all 200ms ease;
+}
+
+#footer .aboutList a:hover::before {
+  opacity: 0.5;
+}
+
+#footer .menuList {
+  font-size: 1.3rem;
+}
+
+#footer .menuList li {
+  border-top: 1px solid #333;
+  padding: 14px 20px;
+}
+
+#footer .menuList li:nth-last-child(1) {
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+
+#footer #footerMenu h2 {
+  padding: 44px 0 28px;
+}
+
+#footer #footerTwitter h2 {
+  padding: 30px 0;
+}
+
+#footer .CR {
+  padding: 88px 0 8px;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+/* medium screen */
+@media (min-width: 678px) {
+  /* picup */
+  #picup .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #picup section {
+    width: calc(100% / 3 - 12px);
+    padding-top: 40px;
+  }
+
+  /* mainAria */
+  #mainAria {
+    display: flex;
+  }
+
+  #mainAria main {
+    width: 70%;
+  }
+
+  #mainAria aside {
+    width: 30%;
+  }
+
+  #mainAria main h2 {
+    padding-top: 72px;
+  }
+
+  #mainAria #sideBar .imgAndName img {
+    margin: 88px 0 30px;
+  }
+
+  /* sideBar */
+
+  #sideBar #archive ul {
+    padding-bottom: 140px;
+  }
+
+  /* footer */
+
+  #footer #footerAbout h2,
+  #footer #footerMenu h2,
+  #footer #footerTwitter h2 {
+    padding: 52px 0 28px;
+  }
+
+  #footer .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #footer .container section {
+    width: calc(100% / 3 - 24px);
+  }
+
+  #footer .CR {
+    padding: 60px 0 8px;
+  }
+}
